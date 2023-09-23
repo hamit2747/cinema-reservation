@@ -5,7 +5,7 @@
 
 # USED TECHNOLOGIES
 - HTML
-- css
+- CSS
 - javascript 
 - Database Creation
 
