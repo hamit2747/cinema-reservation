@@ -1,0 +1,126 @@
+/* css default değer sıfırlama */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+:root{
+    --background-color:#292929 ;
+    --seat-color:#444451;
+    --text-color:#777;
+    --selected-color:#f6eb6f;
+    --reserved-color:#fff;
+    --info-background-color:rgba(0,0,0,0.2);
+
+
+
+
+    /* animasyon */
+--transition:all .5s ease;
+
+/* gölge */
+--box-shadow: 1px 10px 45px 7px rgba(255,255,255,0.75);
+
+
+}
+
+.screen{
+    
+    height: 250px;
+    width: 300px;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: var(--box-shadow);
+ 
+   
+}
+
+.screen img{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+}
+
+
+
+
+.seatRow{
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 10px;
+ 
+
+}
+
+.seat{
+    color: var(--seat-color);
+    font-size: 30px;
+    transition: var(--transition);
+}
+
+.seat.selected{
+    color: var(--selected-color);
+}
+
+.seat.reserved{
+    color: var(--reserved-color);
+}
+
+/*satın alınmış beyaz koltuklara scale yapma */
+.seat:not(.reserved):hover{
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+
+ul{
+    background-color: var(--info-background-color);
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--text-color);
+  
+}
+
+
+.info-text{
+    font-size: xx-large;
+    margin-top: 20px;
+    color: var(--reserved-color);
+    display: none;
+}
+.info-text span{
+    color: var(--selected-color);
+}
+
+
+
